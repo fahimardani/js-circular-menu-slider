@@ -1,4 +1,5 @@
 const body = document.querySelector('body')
+const innerCircle = document.querySelector('.innerCircle')
 const slider = document.querySelector('ul');
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
@@ -36,6 +37,8 @@ function updateSliderPosition() {
   let imgObject = animeData[currentIndex].img
   body.style.background = `url(${imgObject})`;
   body.style.backgroundSize = `100%`;
+  innerCircle.style.background = `url(${imgObject})`;
+  innerCircle.style.backgroundSize = `100%`;
 
   h2.innerHTML = animeData[currentIndex].title;
   p.innerHTML = animeData[currentIndex].description;

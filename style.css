@@ -18,6 +18,14 @@ body {
   backdrop-filter: brightness(.5);
   transition: 1s ease-in-out;
 }
+.innerCircle {
+  position: absolute;
+  z-index: 2;
+  width: 150px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--blue);
+  }
 main {
   translate: 0 20%;
   display: flex;
@@ -36,16 +44,8 @@ main {
     border-radius: 50%;
     background: conic-gradient(var(--black) 60deg, var(--green) 60deg, var(--green) 120deg, var(--black) 120deg);
   }
-  &::after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    width: 150px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background: var(--blue);
-    }
-  }
+
+}
   
   ul {
     list-style: none;
